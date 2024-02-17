@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../assets/bg.webp');
+    background-size: cover;
+}
+
+.activeNav {
+    border-radius: 5rem 0 5rem 0;
+    color: white;
+}
+
+.hbhover:hover {
+    background-color: white;
+    color: rgb(29, 78, 216);
+    transition: all ease-in-out 0.3s;
+}
+
+#hero span {
+    color: rgb(93, 224, 163);;
+}
