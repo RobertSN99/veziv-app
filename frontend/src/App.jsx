@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import UpButton from "./components/UpButton";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer />
     </div>
