@@ -25,7 +25,7 @@ const Navbar = () => {
     }
   }, [])
   return (
-    <nav className={`w-full py-2 z-30 flex items-center justify-center fixed top-0 bg-slate-100 transition-all duration-1000 ${isScrolled ? 'bg-opacity-100' : 'bg-opacity-0'}`}>
+    <nav className={`w-full py-2 z-30 flex items-center justify-center fixed top-0 bg-slate-100 transition-all duration-1000 ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-0'}`}>
       <div id="logo" className="flex-1">
         <Link to="/" className={`text-center font-title text-5xl ml-28 transition-all duration-1000 ${isScrolled ? 'text-slate-900' : 'text-slate-100'}`}>
           VEZIV
