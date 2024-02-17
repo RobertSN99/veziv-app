@@ -9,7 +9,7 @@ const Hero = () => {
     }
   };
   return (
-    <section id="hero" className="bg h-screen">
+    <section id="hero" className="bg min-h-screen h-screen">
       <div className="h-full w-full text-white flex flex-col items-center justify-center gap-5 relative">
         <h1 className="text-7xl font-title">Hi, my name is <span>Robert</span></h1>
         <p className="text-xl m-24 w-1/2 indent-10">
