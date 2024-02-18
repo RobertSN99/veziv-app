@@ -1,10 +1,18 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = ({ isScrolled }) => {
   const location = useLocation();
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
+  };
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (isActive("/") || isActive("/home")) {
+      window.scroll({ behavior: "smooth", top: 0 });
+    } else {
+      navigate("/");
+    }
   };
   return (
     <nav
@@ -12,15 +20,14 @@ const Navbar = ({ isScrolled }) => {
         isScrolled ? "bg-opacity-90" : "bg-opacity-0"
       }`}
     >
-      <div id="logo" className="flex-1">
-        <Link
-          to="/"
-          className={`text-center font-title text-5xl ml-28 transition-all duration-1000 ${
-            isScrolled ? "text-slate-900" : "text-slate-100"
-          }`}
-        >
-          VEZIV
-        </Link>
+      <div
+        id="logo"
+        className={`flex-1 font-title text-5xl ml-28 transition-all duration-1000 cursor-pointer ${
+          isScrolled ? "text-slate-900" : "text-slate-100"
+        }`}
+        onClick={handleClick}
+      >
+        VEZIV
       </div>
       <ul
         className={`flex items-center justify-center flex-1 font-alternative font-bold text-lg transition-all duration-1000 ${
@@ -29,7 +36,7 @@ const Navbar = ({ isScrolled }) => {
       >
         <li
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
-            isActive("/") ? "activeNav bg-blue-700" : ""
+            isActive("/") || isActive("/home") ? "activeNav bg-blue-700" : ""
           }`}
         >
           <Link to="/">Home</Link>
