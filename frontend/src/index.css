@@ -21,3 +21,27 @@
 #hero span {
     color: rgb(93, 224, 163);;
 }
+
+.upbutton {
+    animation: fadeOut 0.5s forwards;
+}
+
+.upbutton.scrolled {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0.4;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 0.4;
+    }
+}
