@@ -21,7 +21,7 @@ const Hero = () => {
           leave a lasting impression.
         </p>
         <button
-          className="absolute animate-bounce bottom-10 flex items-center justify-center gap-2 rounded-full border-2 px-10 py-3 hbhover"
+          className="absolute animate-bounce bottom-10 flex items-center justify-center gap-2 rounded-full border-2 px-10 py-3 primarybtn"
           onClick={handleClick}
         >
           View projects <FaArrowDown />
