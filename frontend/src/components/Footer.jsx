@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 w-screen max-h-56 min-h-32 flex flex-col items-center justify-center bg-slate-950 text-slate-500 font-alternative text-center">
+    <footer className="bottom-0 w-screen max-h-56 min-h-32 border-t-stone-900 border-t-2 flex flex-col items-center justify-center bg-slate-950 text-slate-500 font-alternative text-center">
       <div className="flex items-center justify-around w-full text-left mt-1 ">
         <div>
           <ul>
