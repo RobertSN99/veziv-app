@@ -22,12 +22,11 @@ const Navbar = ({ isScrolled }) => {
     >
       <div
         id="logo"
-        className={`flex-1 font-title text-5xl ml-28 transition-all duration-1000 cursor-pointer ${
+        className={`flex-1 font-title text-5xl ml-28 transition-all duration-1000 ${
           isScrolled ? "text-slate-900" : "text-slate-100"
         }`}
-        onClick={handleClick}
       >
-        VEZIV
+        <h1 className="max-w-fit cursor-pointer" onClick={handleClick}>VEZIV</h1>
       </div>
       <ul
         className={`flex items-center justify-center flex-1 font-alternative font-bold text-lg transition-all duration-1000 ${
