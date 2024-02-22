@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg {
+.bgHero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../assets/bg.webp');
+    background-size: cover;
+}
+
+.bgWorks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../assets/bg2.webp');
     background-size: cover;
 }
 
@@ -12,10 +17,13 @@
     color: white;
 }
 
-.hbhover:hover {
+.primarybtn, .secondarybtn, .alternativebtn {
+    transition: all ease-in-out 0.3s;
+}
+
+.primarybtn:hover {
     background-color: white;
     color: rgb(29, 78, 216);
-    transition: all ease-in-out 0.3s;
 }
 
 #hero span {
@@ -44,4 +52,20 @@
     } to {
         opacity: 0.4;
     }
+}
+
+.secondarybtn:hover {
+    background-color: rgb(29, 78, 216);
+    border-color: rgb(29, 78, 216);
+}
+
+.alternativebtn {
+    color: rgb(29, 78, 216);
+    background-color: white;
+}
+
+.alternativebtn:hover {
+    color: white;
+    background: transparent;
+    border-color: rgb(29, 78, 216);
 }
