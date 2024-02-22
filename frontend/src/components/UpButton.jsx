@@ -1,8 +1,7 @@
 import React from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const UpButton = ({isScrolled}) => {
-
+const UpButton = ({ isScrolled }) => {
   const handleClick = () => {
     const element = document.getElementById("hero");
     if (element) {

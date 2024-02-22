@@ -15,10 +15,9 @@ const Hero = () => {
           Hi, my name is <span>Robert</span>
         </h1>
         <p className="text-xl m-24 w-1/2 indent-10">
-          I'm a <span>web developer</span> passionate about crafting elegant and
-          user-friendly websites, with expertise in front-end development
-          technologies. My goal is to create seamless digital experiences that
-          leave a lasting impression.
+          I'm a <span>web developer</span> passionate about crafting elegant and user-friendly websites, with expertise
+          in front-end development technologies. My goal is to create seamless digital experiences that leave a lasting
+          impression.
         </p>
         <button
           className="absolute animate-bounce bottom-10 flex items-center justify-center gap-2 rounded-full border-2 px-10 py-3 primarybtn"

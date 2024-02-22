@@ -7,28 +7,16 @@ const Footer = () => {
       <div className="flex items-center justify-around w-full text-left mt-1 ">
         <div>
           <ul>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              Contact me
-            </li>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              Pricing
-            </li>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              Blog
-            </li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">Contact me</li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">Pricing</li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">Blog</li>
           </ul>
         </div>
         <div>
           <ul>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              Privacy Policy
-            </li>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              Partners
-            </li>
-            <li className="transition-all hover:text-slate-100 cursor-pointer">
-              FAQs
-            </li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">Privacy Policy</li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">Partners</li>
+            <li className="transition-all hover:text-slate-100 cursor-pointer">FAQs</li>
           </ul>
         </div>
       </div>
