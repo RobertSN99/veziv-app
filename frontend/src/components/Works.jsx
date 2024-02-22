@@ -27,11 +27,11 @@ const Works = () => {
   return (
     <section
       id="works"
-      className="bgWorks min-h-screen text-white bg-black flex flex-col items-center justify-center py-5"
+      className="bgWorks min-h-screen text-white flex flex-col gap-3 items-center justify-center py-5"
     >
       {placeholderData.map((project, index) => (
         <div
-          className="bg-slate-800 rounded-3xl my-5 tracking-widest bg-gradient-to-tr from-neutral-900 to-blue-950"
+          className="w-1/2 rounded-3xl my-5 tracking-widest bg-gradient-to-tr from-neutral-900 to-blue-950"
           key={index}
         >
           {index % 2 === 0 ? (
