@@ -27,3 +27,4 @@ jsconfig.json
 # ENV
 .env
 *.todo
+.prettierrc
