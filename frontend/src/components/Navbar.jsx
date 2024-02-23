@@ -1,18 +1,13 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ isScrolled }) => {
   const location = useLocation();
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
   };
-  const navigate = useNavigate();
-  const handleClick = () => {
-    if (isActive("/") || isActive("/home")) {
-      window.scroll({ behavior: "smooth", top: 0 });
-    } else {
-      navigate("/");
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <nav
@@ -26,9 +21,9 @@ const Navbar = ({ isScrolled }) => {
           isScrolled ? "text-slate-900" : "text-slate-100"
         }`}
       >
-        <h1 className="cursor-pointer max-w-fit" onClick={handleClick}>
+        <a href="/" className="cursor-pointer max-w-fit">
           VEZIV
-        </h1>
+        </a>
       </div>
       <ul
         className={`flex items-center justify-center flex-1 font-alternative font-bold text-lg transition-all duration-1000 ${
@@ -39,6 +34,7 @@ const Navbar = ({ isScrolled }) => {
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
             isActive("/") || isActive("/home") ? "activeNav bg-blue-700" : ""
           }`}
+          onClick={scrollToTop}
         >
           <Link to="/">Home</Link>
         </li>
@@ -46,6 +42,7 @@ const Navbar = ({ isScrolled }) => {
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
             isActive("/resume") ? "activeNav bg-blue-700" : ""
           }`}
+          onClick={scrollToTop}
         >
           <Link to="/resume">Resume</Link>
         </li>
@@ -53,6 +50,7 @@ const Navbar = ({ isScrolled }) => {
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
             isActive("/projects") ? "activeNav bg-blue-700" : ""
           }`}
+          onClick={scrollToTop}
         >
           <Link to="/projects">Projects</Link>
         </li>
@@ -60,6 +58,7 @@ const Navbar = ({ isScrolled }) => {
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
             isActive("/contact") ? "activeNav bg-blue-700" : ""
           }`}
+          onClick={scrollToTop}
         >
           <Link to="/contact">Contact</Link>
         </li>
