@@ -47,7 +47,7 @@ const Navbar = ({ isScrolled }) => {
             isActive("/resume") ? "activeNav bg-blue-700" : ""
           }`}
         >
-          <a href="#">Resume</a>
+          <Link to="/resume">Resume</Link>
         </li>
         <li
           className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
