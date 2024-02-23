@@ -12,11 +12,10 @@ export default {
         alternative: ['Karla']
       },
       screens: {
-        xs: "375px",
-        sm: "575px",
-        md: "768px",
-        lg: "992px",
-        xl: "1200px"
+        xs: "360px",
+        sm: "768px",
+        md: "1280px",
+        lg: "1920px",
       }
     },
   },
