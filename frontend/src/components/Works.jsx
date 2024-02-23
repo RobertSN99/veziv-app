@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const Works = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }
   const placeholderData = [
     {
       thumbnail: "../../assets/veziv.png",
@@ -105,7 +108,7 @@ const Works = () => {
         </div>
       ))}
       <Link to="/projects">
-        <button className="w-48 px-4 py-2 border-2 rounded-full primarybtn">More</button>
+        <button className="w-48 px-4 py-2 border-2 rounded-full primarybtn" onClick={scrollToTop}>More</button>
       </Link>
     </section>
   );
