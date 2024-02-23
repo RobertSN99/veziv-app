@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -62,11 +63,7 @@ const Works = () => {
               {/* Displaying details */}
               <div className="static flex flex-col items-center justify-center w-auto gap-3 px-8 text-center">
                 <h1 className="text-3xl">{project.title}</h1>
-                <a
-                  href={project.customer}
-                  target="_blank"
-                  className="px-4 py-2 border-2 rounded-full secondarybtn"
-                >
+                <a href={project.customer} target="_blank" className="px-4 py-2 border-2 rounded-full secondarybtn">
                   Visit customer
                 </a>
               </div>
@@ -76,11 +73,7 @@ const Works = () => {
               {/* Displaying details first */}
               <div className="static flex flex-col items-center justify-center w-auto gap-3 px-8 text-center">
                 <h1 className="text-3xl">{project.title}</h1>
-                <a
-                  href={project.customer}
-                  target="_blank"
-                  className="px-4 py-2 border-2 rounded-full secondarybtn"
-                >
+                <a href={project.customer} target="_blank" className="px-4 py-2 border-2 rounded-full secondarybtn">
                   Visit customer
                 </a>
               </div>
@@ -111,7 +104,9 @@ const Works = () => {
           )}
         </div>
       ))}
-      <button>TODO</button>
+      <Link to="/projects">
+        <button className="w-48 px-4 py-2 border-2 rounded-full primarybtn">More</button>
+      </Link>
     </section>
   );
 };
