@@ -9,18 +9,18 @@ const Hero = () => {
     }
   };
   return (
-    <section id="hero" className="bgHero min-h-screen h-screen">
-      <div className="h-full w-full text-white flex flex-col items-center justify-center gap-5 relative">
+    <section id="hero" className="h-screen min-h-screen bgHero">
+      <div className="relative flex flex-col items-center justify-center w-full h-full gap-5 text-white">
         <h1 className="text-7xl font-title">
           Hi, my name is <span>Robert</span>
         </h1>
-        <p className="text-xl m-24 w-1/2 indent-10">
+        <p className="w-1/2 m-24 text-xl indent-10">
           I'm a <span>web developer</span> passionate about crafting elegant and user-friendly websites, with expertise
           in front-end development technologies. My goal is to create seamless digital experiences that leave a lasting
           impression.
         </p>
         <button
-          className="absolute animate-bounce bottom-10 flex items-center justify-center gap-2 rounded-full border-2 px-10 py-3 primarybtn"
+          className="absolute flex items-center justify-center gap-2 px-10 py-3 border-2 rounded-full animate-bounce bottom-10 primarybtn"
           onClick={handleClick}
         >
           View projects <FaArrowDown />

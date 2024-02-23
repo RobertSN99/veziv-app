@@ -26,7 +26,7 @@ const Navbar = ({ isScrolled }) => {
           isScrolled ? "text-slate-900" : "text-slate-100"
         }`}
       >
-        <h1 className="max-w-fit cursor-pointer" onClick={handleClick}>
+        <h1 className="cursor-pointer max-w-fit" onClick={handleClick}>
           VEZIV
         </h1>
       </div>
