@@ -3,10 +3,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const UpButton = ({ isScrolled }) => {
   const handleClick = () => {
-    const element = document.getElementById("hero");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    window.scroll({top: 0, behavior: "smooth"})
   };
   return (
     <button
