@@ -3,69 +3,95 @@
 @tailwind utilities;
 
 .bgHero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../assets/bg.webp');
-    background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../assets/bg.webp");
+  background-size: cover;
 }
 
 .bgWorks {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../assets/bg2.webp');
-    background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../assets/bg2.webp");
+  background-size: cover;
 }
 
 .activeNav {
-    border-radius: 5rem 0 5rem 0;
-    color: white;
+  border-radius: 5rem 0 5rem 0;
+  color: white;
 }
 
-.primarybtn, .secondarybtn, .alternativebtn {
-    transition: all ease-in-out 0.3s;
+.primarybtn,
+.secondarybtn,
+.alternativebtn {
+  transition: all ease-in-out 0.3s;
 }
 
 .primarybtn:hover {
-    background-color: white;
-    color: rgb(29, 78, 216);
+  background-color: white;
+  color: rgb(29, 78, 216);
 }
 
 #hero span {
-    color: rgb(93, 224, 163);;
+  color: rgb(93, 224, 163);
 }
 
 .upbutton {
-    animation: fadeOut 0.5s forwards;
+  animation: fadeOut 0.5s forwards;
 }
 
 .upbutton.scrolled {
-    animation: fadeIn 0.5s forwards;
+  animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 0.4;
-    } to {
-        opacity: 0;
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 0.4;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
 }
 
 .secondarybtn:hover {
-    background-color: rgb(29, 78, 216);
-    border-color: rgb(29, 78, 216);
+  background-color: rgb(29, 78, 216);
+  border-color: rgb(29, 78, 216);
 }
 
 .alternativebtn {
-    color: rgb(29, 78, 216);
-    background-color: white;
+  color: rgb(29, 78, 216);
+  background-color: white;
 }
 
 .alternativebtn:hover {
-    color: white;
-    background: transparent;
-    border-color: rgb(29, 78, 216);
+  color: white;
+  background: transparent;
+  border-color: rgb(29, 78, 216);
+}
+
+.view-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.view-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.view-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
 }
