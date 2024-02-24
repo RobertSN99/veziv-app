@@ -30,38 +30,48 @@ const Navbar = ({ isScrolled }) => {
           isScrolled ? "text-slate-900" : "text-slate-100"
         }`}
       >
-        <li
-          className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
-            isActive("/") || isActive("/home") ? "activeNav bg-blue-700" : ""
-          }`}
-          onClick={scrollToTop}
-        >
-          <Link to="/">Home</Link>
-        </li>
-        <li
-          className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
-            isActive("/resume") ? "activeNav bg-blue-700" : ""
-          }`}
-          onClick={scrollToTop}
-        >
-          <Link to="/resume">Resume</Link>
-        </li>
-        <li
-          className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
-            isActive("/projects") ? "activeNav bg-blue-700" : ""
-          }`}
-          onClick={scrollToTop}
-        >
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li
-          className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
-            isActive("/contact") ? "activeNav bg-blue-700" : ""
-          }`}
-          onClick={scrollToTop}
-        >
-          <Link to="/contact">Contact</Link>
-        </li>
+        <Link to="/">
+          {" "}
+          <li
+            className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
+              isActive("/") || isActive("/home") ? "activeNav bg-blue-700" : ""
+            }`}
+            onClick={scrollToTop}
+          >
+            Home
+          </li>
+        </Link>
+        <Link to="/resume">
+          <li
+            className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
+              isActive("/resume") ? "activeNav bg-blue-700" : ""
+            }`}
+            onClick={scrollToTop}
+          >
+            Resume
+          </li>
+        </Link>
+
+        <Link to="/projects">
+          <li
+            className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
+              isActive("/projects") ? "activeNav bg-blue-700" : ""
+            }`}
+            onClick={scrollToTop}
+          >
+            Projects
+          </li>
+        </Link>
+        <Link to="/contact">
+          <li
+            className={`cursor-pointer transition-all hover:scale-110 px-8 py-2 mx-2 ${
+              isActive("/contact") ? "activeNav bg-blue-700" : ""
+            }`}
+            onClick={scrollToTop}
+          >
+            Contact
+          </li>
+        </Link>
       </ul>
     </nav>
   );
