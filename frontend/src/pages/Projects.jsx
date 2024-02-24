@@ -6,7 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import React, { useState } from "react";
 
 const Projects = () => {
-  const [selectedView, setSelectedView] = useState("list");
+  const [selectedView, setSelectedView] = useState("grid");
   const handleViewSwitch = () => {
     if (selectedView === "list") return setSelectedView("grid");
     return setSelectedView("list");
@@ -58,7 +58,7 @@ const Projects = () => {
         classNames="view"
         unmountOnExit
       >
-        <div className="flex items-center justify-center w-full">
+        <div className="flex flex-wrap items-center justify-center w-full">
           {placeholderData.map((project, index) => (
             <ProjectItemGrid key={index} item={project} />
           ))}
