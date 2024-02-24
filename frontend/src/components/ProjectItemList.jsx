@@ -8,25 +8,20 @@ const ProjectItemList = ({ item }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  const data = {
-    thumbnail: item.thumbnail,
-    title: item.title,
-    customer: item.customer,
-  };
   return (
-    <div className="w-1/2 my-5 tracking-widest rounded-3xl bg-gradient-to-tr from-neutral-900 to-blue-950">
+    <div className="w-1/2 m-5 tracking-widest rounded-3xl bg-gradient-to-tr from-neutral-900 to-blue-950">
       <div className="flex items-center justify-between rounded-full">
         {/* Displaying details first */}
-        <div className="static flex flex-col items-center justify-center w-auto gap-3 px-8 text-center">
-          <h1 className="text-3xl">{data.title}</h1>
-          <a href={data.customer} target="_blank" className="px-4 py-2 border-2 rounded-full secondarybtn">
+        <div className="flex flex-col items-center justify-center w-auto gap-3 px-8 text-center">
+          <h1 className="text-3xl">{item.title}</h1>
+          <a href={item.customer} target="_blank" className="px-4 py-2 border-2 rounded-full secondarybtn">
             Visit customer
           </a>
         </div>
         {/* Displaying image */}
         <div className="relative overflow-hidden" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <img
-            src={data.thumbnail}
+            src={item.thumbnail}
             alt=""
             loading="lazy"
             className={`max-w-2xl rounded-3xl transition-all duration-300 relative ${
@@ -39,9 +34,9 @@ const ProjectItemList = ({ item }) => {
               isHovered ? "opacity-1" : "opacity-0"
             }`}
           >
-            <button className="px-4 py-1 border-2 rounded-full">Edit</button>
-            <button className="px-4 py-1 border-2 rounded-full">Hide</button>
-            <button className="px-4 py-1 border-2 rounded-full">Delete</button>
+            <button className="px-4 py-1 border-2 rounded-full primarybtn">Edit</button>
+            <button className="px-4 py-1 border-2 rounded-full primarybtn">Hide</button>
+            <button className="px-4 py-1 border-2 rounded-full primarybtn">Delete</button>
           </div>
         </div>
       </div>
