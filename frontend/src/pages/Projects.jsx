@@ -51,7 +51,14 @@ const Projects = () => {
       <button className="flex items-center justify-center gap-2 px-8 py-1 border-2 rounded-full primarybtn" onClick={handleModalBtn}>
         <FaPlus /><span>Add work</span>
       </button>
-      {modalVisible && <AddWork close={handleModalBtn} />}
+      <CSSTransition
+        in={modalVisible === true}
+        timeout={300}
+        classNames="modal"
+        unmountOnExit
+      >
+        <AddWork close={handleModalBtn} />
+      </CSSTransition>
       <div className="absolute right-5 top-14">
         <button className="p-3 bg-blue-700 rounded-full" onClick={handleViewSwitch}>
           {selectedView === "list" ? <FaList /> : <BsFillGrid3X3GapFill />}
@@ -59,7 +66,7 @@ const Projects = () => {
       </div>
       <CSSTransition
         in={selectedView === "list"}
-        timeout={300} // Adjust timeout duration as per your preference
+        timeout={300}
         classNames="view"
         unmountOnExit
       >
