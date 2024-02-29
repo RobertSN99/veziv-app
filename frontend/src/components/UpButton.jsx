@@ -9,7 +9,7 @@ const UpButton = ({ isScrolled }) => {
     <button
       className={`${
         isScrolled ? "upbutton scrolled" : "upbutton"
-      } fixed z-31 bottom-5 right-10 text-white border-2 p-3 text-lg`}
+      } fixed z-50 bottom-5 right-10 text-white border-2 p-3 text-lg`}
       onClick={handleClick}
     >
       <FaArrowUp />

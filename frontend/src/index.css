@@ -97,3 +97,9 @@
   transition: opacity 300ms, transform 300ms;
 }
 /* ------------------ */
+
+.inputField, .inputField:focus {
+  border-radius: 1rem;
+  padding: 0.15rem 1rem;
+  outline: none;
+}
