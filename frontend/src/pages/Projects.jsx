@@ -4,7 +4,7 @@ import { FaList, FaPlus } from "react-icons/fa6";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { CSSTransition } from "react-transition-group";
 import React, { useEffect, useState } from "react";
-import AddWork from "../components/AddWork";
+import AddWork from "../components/Modals/AddWork";
 
 const Projects = () => {
   const [selectedView, setSelectedView] = useState("grid");
@@ -48,7 +48,7 @@ const Projects = () => {
   ];
   return (
     <main className="flex flex-col items-center justify-center min-h-screen gap-6 pt-24 text-white bg-neutral-950">
-      <button className="flex items-center justify-center gap-2 px-8 py-1 border-2 rounded-full primarybtn" onClick={handleModalBtn}>
+      <button className="flex items-center justify-center gap-2 px-8 py-1 text-green-500 border-2 border-green-500 rounded-full primarybtn" onClick={handleModalBtn}>
         <FaPlus /><span>Add work</span>
       </button>
       <CSSTransition
