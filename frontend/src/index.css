@@ -25,6 +25,7 @@
 
 .primarybtn:hover {
   background-color: white;
+  border-color: white;
   color: rgb(29, 78, 216);
 }
 
