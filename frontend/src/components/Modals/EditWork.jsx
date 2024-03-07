@@ -4,6 +4,7 @@ const EditWork = (props) => {
   const [workTitle, setWorkTitle] = useState("");
   const [workLink, setWorkLink] = useState("");
   const [workImage, setWorkImage] = useState(null);
+  const [formImageName, setFormImageName] = useState("No file chosen.");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +30,11 @@ const EditWork = (props) => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setWorkImage(file);
+    const splitFileName = file.name.split('.');
+    if (splitFileName[0].length < 8) {
+      return setFormImageName(file.name);
+    }
+    return setFormImageName(splitFileName[0].substring(0, 7) + "... ." + splitFileName[1]);
   };
 
   return (
@@ -51,7 +57,7 @@ const EditWork = (props) => {
               className="border-[1px] border-stone-900/20 inputField"
             />
           </div>
-          <div className="flex items-center justify-between w-full pb-2 border-b-2 border-black/5">
+          <div className="flex items-center justify-between w-full gap-3 pb-2 border-b-2 border-black/5">
             <label htmlFor="work_link">Link to Customer:</label>
             <input
               type="text"
@@ -61,11 +67,13 @@ const EditWork = (props) => {
               className="border-[1px] border-stone-900/20 inputField"
             />
           </div>
-          <div className="flex items-center justify-between w-full pb-2 border-b-2 border-black/5">
-            <label htmlFor="work_image" className="w-2/3">
-              Image:
+          <div className="flex items-center justify-between w-full gap-3 pb-2 border-b-2 border-black/5">
+            <label htmlFor="work_image">Image:</label>
+            <input type="file" id="work_image" onChange={handleFileChange} accept="image/*" hidden="hidden" />
+            <label htmlFor="work_image" className="px-5 py-1 transition-all duration-300 rounded-full cursor-pointer bg-green-700/25 hover:bg-green-500/50" onClick={handleFileChange}>
+              Browse
             </label>
-            <input type="file" id="work_image" onChange={handleFileChange} accept="image/*" />
+            <span className="w-1/3 text-nowrap">{formImageName}</span>
           </div>
           <div>
             <button type="submit" className="px-10 py-1 text-white bg-blue-700 rounded-full primarybtn">
